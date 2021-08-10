@@ -239,7 +239,7 @@
 				640151A9269C5AA000C4DF9A /* THHotKeyFieldView.m */,
 			);
 			name = THHotKey;
-			path = ../THCommon/Classes/THHotKey;
+			path = ../../THCommon/Classes/THHotKey;
 			sourceTree = "<group>";
 		};
 		641A7A56174952A900B1856E /* THFoundation */ = {
@@ -258,7 +258,7 @@
 				644440851BBAF62800FD1BCF /* THLog.m */,
 			);
 			name = THFoundation;
-			path = ../THCommon/Classes/THFoundation;
+			path = ../../THCommon/Classes/THFoundation;
 			sourceTree = "<group>";
 		};
 		641A7A7C174952B100B1856E /* THUserSpace */ = {
@@ -267,7 +267,7 @@
 				641AE16E269A55D2005050E7 /* THFrontmostAppSaver.swift */,
 			);
 			name = THUserSpace;
-			path = ../THCommon/Classes/THUserSpace;
+			path = ../../THCommon/Classes/THUserSpace;
 			sourceTree = "<group>";
 		};
 		642D108E1F497C8900DC4897 /* CalYearView */ = {
@@ -457,7 +457,7 @@
 				64E2A5E526BDAD51004437B3 /* THStatusIconAlfredFirst.m */,
 			);
 			name = THDistribution;
-			path = ../THCommon/Classes/THDistribution;
+			path = ../../THCommon/Classes/THDistribution;
 			sourceTree = "<group>";
 		};
 		64DE81B5190A5FBB007CBC1A /* CalView */ = {
@@ -483,7 +483,7 @@
 				64A9EF5A26BC037800F3BFF4 /* THNSChecboxTableCellView.swift */,
 			);
 			name = THView;
-			path = ../THCommon/Classes/THView;
+			path = ../../THCommon/Classes/THView;
 			sourceTree = SOURCE_ROOT;
 		};
 		64EA5C8917315D0A0048B205 /* THExtensions */ = {
@@ -503,7 +503,7 @@
 				64681222174410580039FF5A /* THNSMenuExtensions.m */,
 			);
 			name = THExtensions;
-			path = ../THCommon/Classes/THExtensions;
+			path = ../../THCommon/Classes/THExtensions;
 			sourceTree = SOURCE_ROOT;
 		};
 		64F3553826C1D5F000B18F41 /* THFinderFile */ = {
@@ -514,7 +514,7 @@
 				64F3554626C1D5F000B18F41 /* THSharedLoginItems.h */,
 			);
 			name = THFinderFile;
-			path = ../THCommon/Classes/THFinderFile;
+			path = ../../THCommon/Classes/THFinderFile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
