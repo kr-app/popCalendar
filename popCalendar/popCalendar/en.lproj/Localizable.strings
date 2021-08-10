@@ -1,0 +1,133 @@
+// Localizable.strings (English)
+
+"ALFRED_FIRST_STARTED_FROM_MENU_BAR" = "is accessible from your menu bar";
+
+"HELP_GOTO_WEBSITE" = "Go to the popCalendar Website…";
+"HELP_CONTACT_SUPPORT_OR_FEEDBACK" = "Contact Support or Send Feedback…";
+"HELP_EMAIL_SUPPORT" = "Contact Support by E-mail…";
+"HELP_SUPPORT_PAGE" = "Suport Web Page…";
+"HELP_SUBMIT_REPORT" = "Submit Problem Report…";
+"HELP_REVEAL_MAS_PRODUCT" = "Reveal in Mac App Store…";
+
+// PreferencesWindowController
+"popCalendar Preferences" = "popCalendar Preferences";
+"General" = "General";
+"Relaunch popCalendar on Login" = "Relaunch popCalendar on Login";
+"Enable Shortcut" = "Enable Shortcut";
+"No Shortcut" = "No Shortcut";
+"Icon as Date & Time" = "Icon as Date & Time";
+"Calendars" = "Calendars";
+"Year View" = "Year View";
+"Events Display" = "Event Display";
+"Month View" = "Month View";
+"First day of week" = "First day of week";
+"Weekday Format" = "Weekday Format";
+"Week End Day" = "Week End Day";
+"Week End Day Colored" = "Week End Day Colored";
+"Default (%@)" = "Default (%@)";
+
+"WeekDayDisplayMode_MON" = "MON";
+"WeekDayDisplayMode_M" = "M";
+
+"PCalEventsDisplayModeUniqueColor" = "Light Color";
+"PCalEventsDisplayModeNotDisplay" = "Do not show";
+"PCalEventsDisplayModeShowColors" = "Show Colors";
+
+"About popCalendar…" = "About popCalendar…";
+"Show Calendar" = "Show Calendar";
+"Hide Calendar" = "Hide Calendar";
+"Preferences…" = "Preferences…";
+"Quit popCalendar" = "Quit popCalendar";
+
+"%@ does not have access to your calendars." = "%@ does not have access to your calendars.";
+"Open Security Preferences" = "Open Security Preferences";
+
+"Do you want to save the changes made to \"%@\"?" = "Do you want to save the changes made to \"%@\"?";
+"Do you want to save the changes made to the event?" = "Do you want to save the changes made to the event?";
+"Your changes will be lost if you don’t save them." = "Your changes will be lost if you don’t save them.";
+
+"None" = "None";
+"None_F" = "None";
+"Others" = "Others";
+"All-day" = "All-day";
+
+"Show in Calendar App" = "Show in Calendar App";
+"Show Date in Calendar App" = "Show Date in Calendar App";
+"Open Calendar App" = "Open Calendar App";
+
+"No calendar" = "No calendar";
+"No selected calendar" = "No selected calendar";
+
+"No Selected Date" = "No Selected Date";
+
+"No Event" = "No Event";
+"New Event" = "New Event";
+"No Selected Event" = "No Selected Event";
+
+"Delete" = "Delete";
+"Delete \"%@\"" = "Delete \"%@\"";
+"Cancel" = "Cancel";
+"Save" = "Save";
+"Don't Save" = "Don't Save";
+
+"Can not delete event" = "Can not delete event";
+"Can not save event" = "Can not save event";
+
+"Today" = "Today";
+"Mon" = "Mon";
+"Tue" = "Tue";
+"Wed" = "Wed";
+"Thu" = "Thu";
+"Fri" = "Fri";
+"Sat" = "Sat";
+"Sun" = "Sun";
+
+"calendar" = "Calendar";
+"ev_date_from" = "From";
+"ev_date_to" = "To";
+"invitees" = "Invitees";
+"alert" = "Alert";
+"location" = "Location";
+"url" = "URL";
+"notes" = "Notes";
+"%d participants" = "%d participants";
+"Nobody" = "Nobody";
+
+"Event Title" = "Event Title";
+"Location_None" = "None";
+"URL_None" = "None";
+"Notes_None" = "None";
+
+"Month" = "Month";
+"Year" = "Year";
+
+// PCalEvent
+"The calendar \"%@\" is not editable." = "The calendar \"%@\" is not editable.";
+"The title of event is empty." = "The title of event is empty.";
+"The Start/End date of event is incorrect." = "The Start/End date of event is incorrect.";
+"The Start/End date of event is incorrect." = "The Start/End date of event is incorrect.";
+
+"Time of Event" = "Time of Event";
+"%f seconds after" = "%f seconds after";
+"1 minute after" = "1 minute after";
+"%.0f minutes after" = "%.0f minutes after";
+"1 hour after" = "1 hour after";
+"%.0f hours after" = "%.0f hours after";
+"%.0f days after" = "%.0f days after";
+"%f seconds before" = "%f seconds before";
+"1 minute before" = "1 minute before";
+"%.0f minutes before" = "%.0f minutes before";
+"1 hour before" = "1 hour before";
+"%.0f hours before" = "%.0f hours before";
+"%.0f days before" = "%.0f days before";
+
+// EventEditor
+"At the time of event" = "At the time of event";
+"5 minutes before" = "5 minutes before";
+"10 minutes before" = "10 minutes before";
+"15 minutes before" = "15 minutes before";
+"30 minutes before" = "30 minutes before";
+"1 hour before" = "1 hour before";
+"2 hours before" = "2 hours before";
+"1 day before" = "1 day before";
+"2 days before" = "2 days before";
