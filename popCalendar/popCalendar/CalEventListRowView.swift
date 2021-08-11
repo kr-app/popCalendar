@@ -34,7 +34,7 @@ class CalEventListRowView : NSView, NSMenuDelegate {
 		self.dateFormatter = dateFormatter
 		self.delegator = delegator
 	
-		self.menu = NSMenu(withTitle: "RightMenu", delegate: self, autoenablesItems: false)
+		self.menu = NSMenu(title: "RightMenu", delegate: self, autoenablesItems: false)
 	}
 	
 	required init?(coder: NSCoder) {
@@ -135,13 +135,13 @@ extension CalEventListRowView {
 	func menuNeedsUpdate(_ menu: NSMenu) {
 		menu.removeAllItems()
 
-		menu.addItem(THMenuItem(withTitle: THLocalizedString("Show in Calendar App"), block: { () in
+		menu.addItem(THMenuItem(title: THLocalizedString("Show in Calendar App"), block: { () in
 			self.delegator.calEventListRowViewRevealInCalApp(self)
 		}))
 
 		menu.addItem(NSMenuItem.separator())
 
-		menu.addItem(THMenuItem(withTitle: THLocalizedString("Copy"), block: { () in
+		menu.addItem(THMenuItem(title: THLocalizedString("Copy"), block: { () in
 			if self.event.writeToPasteboard(NSPasteboard.general) == false {
 				THLogError("writeToPasteboard == false")
 			}
@@ -149,7 +149,7 @@ extension CalEventListRowView {
 
 		menu.addItem(NSMenuItem.separator())
 		let deletable = event.event.calendar.allowsContentModifications
-		menu.addItem(THMenuItem(withTitle: THLocalizedString("Delete \"\(event.title?.th_truncate(maxChars: 30, by: .byTruncatingTail))\""), enabled: deletable, block: { () in
+		menu.addItem(THMenuItem(title: THLocalizedString("Delete \"\(event.title?.th_truncate(maxChars: 30, by: .byTruncatingTail))\""), enabled: deletable, block: { () in
 			self.delegator.calEventListRowViewWantsDelete(self)
 		}))
 	}

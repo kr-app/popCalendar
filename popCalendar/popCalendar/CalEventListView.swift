@@ -119,7 +119,7 @@ import Cocoa
 		
 		if dateLabel == nil {
 			createViews()
-			self.menu = NSMenu(withTitle: "RightMenu", delegate: self, autoenablesItems: false)
+			self.menu = NSMenu(title: "RightMenu", delegate: self, autoenablesItems: false)
 		}
 	
 		self.calDate = calDate
@@ -133,7 +133,7 @@ import Cocoa
 		plusEvent.setTextPressed("+", font: nil, color: NSColor(calibratedWhite: isDark ? 0.75 : 0.1, alpha: 1.0), underlineStyle: 0)
 		plusEvent.isHidden = calDate == nil
 
-		dateLabel.stringValue = calDate == nil ? "" : DateFormatter(withDateFormat: "EEEE d MMMM").string(from: calDate!.date)
+		dateLabel.stringValue = calDate == nil ? "" : DateFormatter(dateFormat: "EEEE d MMMM").string(from: calDate!.date)
 		//_dateLabel.textColor = isDark ? NSColor.white : NSColor.black
 		//_newEventOverText setHidden:calDate!=nil?NO:YES];
 
@@ -187,7 +187,7 @@ import Cocoa
 	func menuNeedsUpdate(_ menu: NSMenu) {
 		menu.removeAllItems()
 	
-		menu.addItem(THMenuItem(withTitle: THLocalizedString("New Event"), block: {() in
+		menu.addItem(THMenuItem(title: THLocalizedString("New Event"), block: {() in
 			if self.delegator.calEventListViewShouldChangeSelection(self) == false {
 				return
 			}

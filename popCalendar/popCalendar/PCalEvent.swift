@@ -84,9 +84,9 @@ extension PCalEvent {
 			let sdC = cal.dateComponents([.year, .month, .day], from: sd)
 			let edC = cal.dateComponents([.year, .month, .day], from: ed)
 			
-			let d_df = DateFormatter(withDateStyle: .short, timeStyle: .none)
-			let dt_df = DateFormatter(withDateStyle: .short, timeStyle: .short)
-			let t_df = DateFormatter(withDateStyle: .none, timeStyle: .short)
+			let d_df = DateFormatter(dateStyle: .short, timeStyle: .none)
+			let dt_df = DateFormatter(dateStyle: .short, timeStyle: .short)
+			let t_df = DateFormatter(dateStyle: .none, timeStyle: .short)
 
 			let scheduled: String!
 			if sdC.year == edC.year && sdC.month == edC.month && sdC.day == edC.day {

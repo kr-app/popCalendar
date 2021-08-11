@@ -94,7 +94,7 @@ extension NSStatusBarButton {
 			var format: String? = nil
 
 			if let udDateFormat = PCalUserContext.shared.customClockDateFormat {
- 				let df = DateFormatter(withDateFormat: udDateFormat)
+ 				let df = DateFormatter(dateFormat: udDateFormat)
 				if df.string(from: Date()).count > 0 {
 					format = udDateFormat
 				}
@@ -106,7 +106,7 @@ extension NSStatusBarButton {
 
 			hasSecond = format!.range(of: "s") != nil
 
-			clockDateFormatter = DateFormatter(withDateFormat: format!)
+			clockDateFormatter = DateFormatter(dateFormat: format!)
 		}
 		else {
 //			statusItem.length=30.0;

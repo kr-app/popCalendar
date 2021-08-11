@@ -9,8 +9,8 @@ class PCalEventIcsFile: NSObject {
 	private(set) var endDate: Date!
 	private(set) var allDay = false
 
-	static let df_yyyy_hms = DateFormatter(withDateFormat: "yyyyMMdd HHmmss")
-	static let df_yyyy = DateFormatter(withDateFormat: "yyyyMMdd")
+	static let df_yyyy_hms = DateFormatter(dateFormat: "yyyyMMdd HHmmss")
+	static let df_yyyy = DateFormatter(dateFormat: "yyyyMMdd")
 
 	private var filePath: String!
 	private var lines: [String]!
