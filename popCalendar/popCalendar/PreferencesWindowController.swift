@@ -58,21 +58,32 @@ fileprivate class SourceCaltem {
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------
-@objc class PreferencesWindowController: PreferencesWindowControllerObjc,
+class PreferencesWindowController: NSWindowController,
 																		NSTableViewDataSource, NSTableViewDelegate,
 																		THNSChecboxTableCellViewProtocol {
 
-	@objc static let shared = PreferencesWindowController(windowNibName: "PreferencesWindowController")
+	static let shared = PreferencesWindowController(windowNibName: "PreferencesWindowController")
 
+	// General
 	@IBOutlet var relaunchOnLoginButton: NSButton!
 	@IBOutlet var hotKeyButton: NSButton!
 	@IBOutlet var hotKeyField: THHotKeyFieldView!
 	@IBOutlet var iconAsClockButton: NSButton!
 	@IBOutlet var iconClockOptionsButton: NSButton!
 	@IBOutlet var customClockOptionsWindowController: PreferencesClockOptionsWindowController!
+
+	// Calendars
 	@IBOutlet var calendarsTableView: NSTableView!
 
-	@objc weak var delegator: PreferencesWindowControllerDelegatorProtocol!
+	// Year View
+	@IBOutlet var yearEventsDisplayModePopMenu: NSPopUpButton!
+
+	// Month View
+	@IBOutlet var firstWeekDayMenu: NSPopUpButton!
+	@IBOutlet var weekDayDisplayModeSeg: NSSegmentedControl!
+	@IBOutlet var monthEventsDisplayModePopMenu: NSPopUpButton!
+
+	weak var delegator = NSApplication.shared.delegate as? PreferencesWindowControllerDelegatorProtocol
 
 	private var sourceCalList: [SourceCaltem]?
 
@@ -80,8 +91,6 @@ fileprivate class SourceCaltem {
 		super.windowDidLoad()
 
 		self.window!.title = THLocalizedString("popCalendar Preferences")
-
-		delegator = NSApplication.shared.delegate as! PreferencesWindowControllerDelegatorProtocol
 
 		let hotKey = THHotKeyRepresentation.fromUserDefaults()
 		hotKeyButton.state = (hotKey != nil && hotKey!.isEnabled == true) ? .on : .off
@@ -94,6 +103,29 @@ fileprivate class SourceCaltem {
 		iconAsClockButton.state = .on
 		iconAsClockButton.isEnabled = false
 		iconClockOptionsButton.isEnabled = iconAsClockButton.state == .on
+		
+		// Month View
+		weekDayDisplayModeSeg.setLabel(THLocalizedString("WeekDayDisplayMode_MON"), forSegment: 0)
+		weekDayDisplayModeSeg.setLabel(THLocalizedString("WeekDayDisplayMode_M"), forSegment: 1)
+		weekDayDisplayModeSeg.selectedSegment = PCalUserContext.shared.weekDayDisplayMode.rawValue
+		
+		let frame = weekDayDisplayModeSeg.frame
+		weekDayDisplayModeSeg.sizeToFit()
+		weekDayDisplayModeSeg.frame = NSRect(frame.origin.x, frame.origin.y, CGFloatFloor(weekDayDisplayModeSeg.frame.size.width), frame.size.height)
+
+		yearEventsDisplayModePopMenu.removeAllItems()
+		yearEventsDisplayModePopMenu.menu!.addItem(NSMenuItem(title: THLocalizedString("PCalEventsDisplayModeUniqueColor"), tag: PCalEventsDisplayMode.uniqueColor.rawValue))
+		yearEventsDisplayModePopMenu.menu!.addItem(NSMenuItem.separator())
+		yearEventsDisplayModePopMenu.menu!.addItem(NSMenuItem(title: THLocalizedString("PCalEventsDisplayModeNotDisplay"), tag: PCalEventsDisplayMode.notDisplay.rawValue))
+		yearEventsDisplayModePopMenu.menu!.addItem(NSMenuItem(title: THLocalizedString("PCalEventsDisplayModeShowColors"), tag: PCalEventsDisplayMode.showColors.rawValue))
+
+		monthEventsDisplayModePopMenu.removeAllItems()
+		monthEventsDisplayModePopMenu.menu!.addItem(NSMenuItem(title: THLocalizedString("PCalEventsDisplayModeUniqueColor"), tag: PCalEventsDisplayMode.uniqueColor.rawValue))
+		monthEventsDisplayModePopMenu.menu!.addItem(NSMenuItem.separator())
+		monthEventsDisplayModePopMenu.menu!.addItem(NSMenuItem(title: THLocalizedString("PCalEventsDisplayModeNotDisplay"), tag: PCalEventsDisplayMode.notDisplay.rawValue))
+		monthEventsDisplayModePopMenu.menu!.addItem(NSMenuItem(title: THLocalizedString("PCalEventsDisplayModeShowColors"), tag: PCalEventsDisplayMode.showColors.rawValue))
+	
+		updateUI()
 	}
 
 	// MARK: -
@@ -113,6 +145,38 @@ fileprivate class SourceCaltem {
 
 	// MARK: -
 
+	private func updateUI() {
+		// Year View
+		yearEventsDisplayModePopMenu.selectItem(withTag: PCalUserContext.shared.yearEventsDisplayMode)
+
+		// Month View
+		firstWeekDayMenu.removeAllItems()
+
+		let firstWeekday = Calendar.current.firstWeekday
+		let dateFormatter = DateFormatter()
+		let weekdaySymbols = dateFormatter.weekdaySymbols ?? []
+		let dFirstWeekday = firstWeekday - 1 < weekdaySymbols.count ? weekdaySymbols[firstWeekday - 1] : "--"
+
+		firstWeekDayMenu.menu!.addItem(NSMenuItem(title: THLocalizedString("Default") + " (\(dFirstWeekday))"))
+		if weekdaySymbols.count == 7 {
+			firstWeekDayMenu.menu?.addItem(NSMenuItem.separator())
+			for i in 0...6 {
+				firstWeekDayMenu.menu!.addItem(NSMenuItem(title: weekdaySymbols[i], representedObject: i + 1))
+			}
+		}
+
+		let pFirstWeekDay = PCalUserContext.shared.firstWeekDay
+		
+		for (i, item) in firstWeekDayMenu.itemArray.enumerated() {
+			if pFirstWeekDay == nil || (item.representedObject as? Int) == pFirstWeekDay {
+				firstWeekDayMenu.selectItem(at: i)
+				break
+			}
+		}
+
+		monthEventsDisplayModePopMenu.selectItem(withTag: PCalUserContext.shared.monthEventsDisplayMode)
+	}
+	
 	func updateUILoginItem() {
 		relaunchOnLoginButton.state = THAppInLoginItem.loginItemStatus()
 	}
@@ -182,7 +246,7 @@ fileprivate class SourceCaltem {
 			}
 			
 			PCalUserContext.shared.excludedCalendars = excludedCalendars
-			delegator.preferencesWindowController(self, didChange: ["kind": 1])
+			delegator?.preferencesWindowController(self, didChange: ["kind": 1])
 		}
 	}
 
@@ -202,6 +266,41 @@ fileprivate class SourceCaltem {
 			customClockOptionsWindowController.delegator = delegator
 			customClockOptionsWindowController.beginAsForWindow(sender.window!)
 		}
+//	if (sender==self.iconAsClockButton)
+//	{
+//		if (self.iconAsClockButton.state==NSControlStateValueOn && ([PCalUserContext shared].iconStyle&PCalIconStyleClock)==0)
+//		{
+//			if ([PCalUserContext shared].iconStyle==0)
+//				[PCalUserContext shared].iconStyle=		PCalIconStyleClock|
+//																				PCalIconStyleClockUse24Hour|
+//																				//PCalIconStyleClockShowAmPm|
+//																				PCalIconStyleClockShowDay|
+//																				PCalIconStyleClockShowDate;
+//			else
+//				[PCalUserContext shared].iconStyle+=PCalIconStyleClock;
+//		}
+//		else if (self.iconAsClockButton.state==NSControlStateValueOff && ([PCalUserContext shared].iconStyle&PCalIconStyleClock)!=0)
+//			[PCalUserContext shared].iconStyle-=PCalIconStyleClock;
+//
+//		[_observator preferencesWindowController:self didChange:@{@"kind":@(2)}];
+//		[self updateUI];
+//	}
+
+		// Year View
+		else if sender == self.yearEventsDisplayModePopMenu {
+			PCalUserContext.shared.yearEventsDisplayMode = yearEventsDisplayModePopMenu.selectedTag()
+		}
+		// Month View
+		else if sender == self.firstWeekDayMenu {
+			PCalUserContext.shared.firstWeekDay = firstWeekDayMenu.selectedItem!.representedObject as? Int
+		}
+		else if sender == self.weekDayDisplayModeSeg {
+			PCalUserContext.shared.weekDayDisplayMode = PCalWeekDayDisplayMode(rawValue: weekDayDisplayModeSeg.selectedSegment)!
+		}
+		else if sender == self.monthEventsDisplayModePopMenu {
+			PCalUserContext.shared.monthEventsDisplayMode = monthEventsDisplayModePopMenu.selectedTag()
+		}
+
 	}
 
 	// MARK: -

@@ -193,10 +193,10 @@ import EventKit
 		return allCalendars
 	}
 
-	@objc func firstWeekdayValue() -> Int {
+	func firstWeekdayValue() -> Int {
 		if let pFirstWeekDay = PCalUserContext.shared.firstWeekDay {
-			if pFirstWeekDay.intValue > 0 && pFirstWeekDay.intValue <= 7 {
-				return pFirstWeekDay.intValue
+			if pFirstWeekDay > 0 && pFirstWeekDay <= 7 {
+				return pFirstWeekDay
 			}
 		}
 		return self.calendar.firstWeekday

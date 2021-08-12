@@ -73,7 +73,6 @@
 		64D1132D1F696BBB003D5E6D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641718E717848A6F00B047AB /* Security.framework */; };
 		64D682801A383E4300C78E48 /* THFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D6827F1A383E4300C78E48 /* THFoundation.m */; };
 		64D8FE412671315D0085A746 /* THLocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D8FE402671315D0085A746 /* THLocalizedString.swift */; };
-		64D9BEBD1B594B7100931FA9 /* PreferencesWindowControllerObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D9BEBC1B594B7100931FA9 /* PreferencesWindowControllerObjc.m */; };
 		64D9C213269227B0007E4456 /* THOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D9C212269227B0007E4456 /* THOverView.swift */; };
 		64DE81B4190A5FB4007CBC1A /* CalMonthViewClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 64DE81B3190A5FB4007CBC1A /* CalMonthViewClass.m */; };
 		64E2A5E726BDAD51004437B3 /* THStatusIconAlfredFirst.m in Sources */ = {isa = PBXBuildFile; fileRef = 64E2A5E526BDAD51004437B3 /* THStatusIconAlfredFirst.m */; };
@@ -166,7 +165,6 @@
 		648A4906172DC854007C962D /* PaneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaneViewController.h; sourceTree = "<group>"; };
 		648A4907172DC855007C962D /* PaneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaneViewController.m; sourceTree = "<group>"; };
 		648A4908172DC855007C962D /* PaneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaneViewController.xib; sourceTree = "<group>"; };
-		648A4916172E894A007C962D /* PreferencesWindowControllerObjc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowControllerObjc.h; sourceTree = "<group>"; };
 		648A4918172E894A007C962D /* PreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindowController.xib; sourceTree = "<group>"; };
 		648A4927172E898C007C962D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		648A4929172E898F007C962D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 		64D6827E1A383E4300C78E48 /* THFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THFoundation.h; sourceTree = "<group>"; };
 		64D6827F1A383E4300C78E48 /* THFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = THFoundation.m; sourceTree = "<group>"; };
 		64D8FE402671315D0085A746 /* THLocalizedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THLocalizedString.swift; sourceTree = "<group>"; };
-		64D9BEBC1B594B7100931FA9 /* PreferencesWindowControllerObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowControllerObjc.m; sourceTree = "<group>"; };
 		64D9C212269227B0007E4456 /* THOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THOverView.swift; sourceTree = "<group>"; };
 		64DE81B2190A5FB4007CBC1A /* CalMonthViewClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalMonthViewClass.h; sourceTree = "<group>"; };
 		64DE81B3190A5FB4007CBC1A /* CalMonthViewClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalMonthViewClass.m; sourceTree = "<group>"; };
@@ -400,8 +397,6 @@
 				644DF0B8172C3C37009020B1 /* AppDelegate.m */,
 				640F126226BB0FDA001C9E99 /* PreferencesClockOptionsWindowController.swift */,
 				640F126426BB2435001C9E99 /* PreferencesWindowController.swift */,
-				648A4916172E894A007C962D /* PreferencesWindowControllerObjc.h */,
-				64D9BEBC1B594B7100931FA9 /* PreferencesWindowControllerObjc.m */,
 				648A4918172E894A007C962D /* PreferencesWindowController.xib */,
 			);
 			name = AppDelegate;
@@ -629,7 +624,6 @@
 				64D8FE412671315D0085A746 /* THLocalizedString.swift in Sources */,
 				64B92F22268FA0B2001803CB /* PCalWindow.swift in Sources */,
 				64385EF7256DA77B00E4C81A /* THFileManagerExtensions.swift in Sources */,
-				64D9BEBD1B594B7100931FA9 /* PreferencesWindowControllerObjc.m in Sources */,
 				645F2C9C26BFFF20005CECBD /* PaneTopYearView.swift in Sources */,
 				64B92F20268F9456001803CB /* PCalEvent.swift in Sources */,
 				640374E02567295900A49826 /* THFormatterExtensions.swift in Sources */,

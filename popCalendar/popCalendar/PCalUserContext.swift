@@ -44,7 +44,7 @@ struct PCalIconStyle: OptionSet { // SERIALISZED
 	@objc var excludedCalendars = [String]()
 	@objc var yearEventsDisplayMode: Int = 0
 	@objc var weekDayDisplayMode: PCalWeekDayDisplayMode = .normal
-	@objc var firstWeekDay: NSNumber?
+	var firstWeekDay: Int?
 	@objc var monthEventsDisplayMode: Int = 0
 	@objc var customClockDateFormat: String?
 
@@ -73,7 +73,7 @@ struct PCalIconStyle: OptionSet { // SERIALISZED
 		}
 		excludedCalendars = ud.object(forKey: "excludedCalendars") as? [String] ?? []
 		yearEventsDisplayMode = ud.integer(forKey: "YearEventsDisplayMode")
-		firstWeekDay = ud.object(forKey: "PCalUserContext-firstWeekDay") as? NSNumber
+		firstWeekDay = ud.integer(forKey: "PCalUserContext-firstWeekDay")
 		weekDayDisplayMode = PCalWeekDayDisplayMode(rawValue: ud.integer(forKey: "PCalUserContext-weekDayDisplayMode")) ?? .normal
 		monthEventsDisplayMode = ud.integer(forKey: "PCalUserContext-monthEventsDisplayMode")
 		customClockDateFormat = ud.string(forKey: "PCalUserContext-customClockDateFormat")
