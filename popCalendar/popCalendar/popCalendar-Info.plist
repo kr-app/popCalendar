@@ -47,8 +47,6 @@
 	<string>Display your Calendars from the menubar</string>
 	<key>NSContactsUsageDescription</key>
 	<string>Display invites card in Event</string>
-	<key>NSHumanReadableCopyright</key>
-	<string>2014-2021</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

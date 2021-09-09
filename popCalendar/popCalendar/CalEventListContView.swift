@@ -31,7 +31,7 @@ class CalEventListContView : NSView, NSMenuDelegate {
 	func reloadData(withEvents events:[PCalEvent]?, selectedEvent: String?) {
 		th_removeAllSubviews()
 
-		let events = events?.sorted(by: { $0.startDate > $1.startDate })
+		let events = events?.sorted(by: { $0.startDate < $1.startDate })
 		let dateFormatter = DateFormatter(dateStyle: .none, timeStyle: .short)
 
 		let frameSz = self.frame.size

@@ -540,7 +540,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1230;
-				ORGANIZATIONNAME = "Magnesium-App";
+				ORGANIZATIONNAME = "kr-app";
 				TargetAttributes = {
 					644DF0A1172C3C37009020B1 = {
 						LastSwiftMigration = 1210;

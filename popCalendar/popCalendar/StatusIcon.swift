@@ -39,8 +39,7 @@ extension NSStatusBarButton {
 	private var calendar = Calendar.current
 
 	private var timer: Timer?
-	private var dcMin: Int = 0
-
+	private var dateDc: (day: Int, hour: Int, min: Int) = (0, 0, 0)
 	private var iconStyle: PCalIconStyle!
 	private var clockDateFormatter: DateFormatter!
 	private var hasSecond = false
@@ -66,9 +65,9 @@ extension NSStatusBarButton {
 		if iconStyle.contains(.clock) == true {
 
 			if hasSecond == false {
-				let min = calendar.component(.minute, from: Date())
-				if dcMin != min {
-					dcMin = min
+				let comps = calendar.dateComponents([.day, .hour, .minute], from: Date())
+				if dateDc.day != comps.day! || dateDc.hour != comps.hour! || dateDc.min != comps.minute! {
+					dateDc = (day: comps.day!, hour: comps.hour!, min: comps.minute!)
 					updateIconAsClock()
 				}
 			}
@@ -119,7 +118,7 @@ extension NSStatusBarButton {
 
 		updateFromIconStyle()
 
-		dcMin = 0
+		dateDc = (0, 0, 0)
 
 		if timer == nil {
 			timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(updatorTimerAction), userInfo: nil, repeats: true)
