@@ -10,7 +10,7 @@ import Cocoa
 															NSColor(calibratedWhite: 0.5, alpha: 1.0), // mois courrant
 															NSColor(calibratedWhite: 0.33, alpha: 1.0)] // mois différent
 
-	@objc class func drawColors(_ objects: Any?, inRect rect: NSRect, opacity: CGFloat) {
+	@objc class func drawEventColors(_ objects: Any?, inRect rect: NSRect, opacity: CGFloat) {
 
 		if let color = objects as? NSColor {
 			color.set()

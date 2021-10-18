@@ -54,6 +54,7 @@
 		649212F825587642002E3F78 /* THFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649212F725587642002E3F78 /* THFoundation.swift */; };
 		649212FB25587652002E3F78 /* THExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649212FA25587652002E3F78 /* THExtensions.swift */; };
 		649823E126B73A97003C73B0 /* CalEventListContView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649823E026B73A97003C73B0 /* CalEventListContView.swift */; };
+		649831872710D60B00D80AA2 /* THDataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649831862710D60B00D80AA2 /* THDataExtensions.swift */; };
 		64A9EF5B26BC037800F3BFF4 /* THNSChecboxTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A9EF5A26BC037800F3BFF4 /* THNSChecboxTableCellView.swift */; };
 		64AFCCDA268CE8DA00712F77 /* PCalUserContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64AFCCD9268CE8DA00712F77 /* PCalUserContext.swift */; };
 		64B1A7B126810C9800B558E6 /* THNSTextViewPlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B1A7B026810C9800B558E6 /* THNSTextViewPlaceHolder.swift */; };
@@ -172,6 +173,7 @@
 		649212F725587642002E3F78 /* THFoundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THFoundation.swift; sourceTree = "<group>"; };
 		649212FA25587652002E3F78 /* THExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THExtensions.swift; sourceTree = "<group>"; };
 		649823E026B73A97003C73B0 /* CalEventListContView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalEventListContView.swift; sourceTree = "<group>"; };
+		649831862710D60B00D80AA2 /* THDataExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THDataExtensions.swift; sourceTree = "<group>"; };
 		64A9EF5A26BC037800F3BFF4 /* THNSChecboxTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THNSChecboxTableCellView.swift; sourceTree = "<group>"; };
 		64AD07E0192759CC00F90618 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		64AFCCD9268CE8DA00712F77 /* PCalUserContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCalUserContext.swift; sourceTree = "<group>"; };
@@ -486,6 +488,7 @@
 			children = (
 				649212FA25587652002E3F78 /* THExtensions.swift */,
 				6416238B25685A1700433E79 /* THCocoaExtensions.swift */,
+				649831862710D60B00D80AA2 /* THDataExtensions.swift */,
 				640151D7269C941100C4DF9A /* THNSColorExtensions.swift */,
 				640374DF2567295900A49826 /* THFormatterExtensions.swift */,
 				6424BCBC269F54E3008E7084 /* THNSImageExtensions.swift */,
@@ -651,6 +654,7 @@
 				6456F7AE17CA5B7800822FD3 /* EventEditorViewController.m in Sources */,
 				643639772560681100DEAA76 /* THStringExtensions.swift in Sources */,
 				64C8055726B72EAD002F7296 /* CalEventListView.swift in Sources */,
+				649831872710D60B00D80AA2 /* THDataExtensions.swift in Sources */,
 				64F3554F26C1D5F000B18F41 /* THSharedLoginItems.m in Sources */,
 				64B1A7B126810C9800B558E6 /* THNSTextViewPlaceHolder.swift in Sources */,
 				64C9D1AB26B6A5E500484A30 /* PCalWeekNumberView.swift in Sources */,

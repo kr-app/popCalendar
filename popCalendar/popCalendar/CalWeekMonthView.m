@@ -206,7 +206,7 @@
 			if (_isSwitchingMode==NO)
 			{
 				id colors=nil;
-				CGFloat opacity=isDark==YES?0.6:1.0;
+				CGFloat opacity=isDark==YES?0.33:0.33;
 				NSRect rect=NSMakeRect(pt.x+CGFloatFloor((cellSz.width-26.0)/2.0),pt.y+CGFloatFloor((cellSz.height-26.0)/2.0),26.0,26.0);
 
 				if (date==selectedDate)
@@ -228,7 +228,7 @@
 				}
 
 				if (colors!=nil)
-					[CalEventColor drawColors:colors inRect:rect opacity:opacity];
+					[CalEventColor drawEventColors:colors inRect:rect opacity:opacity];
 			}
 
 			NSAttributedString *as=[date attributedStringOfDay];

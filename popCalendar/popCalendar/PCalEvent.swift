@@ -186,7 +186,7 @@ extension PCalEvent {
 	//		circleSz*=1.5;
 	//
 	//		NSRect circleRect=NSMakeRect(rect.origin.x+CGFloatFloor((rect.size.width-circleSz)/2.0),rect.origin.y+CGFloatFloor((rect.size.height-circleSz)/2.0),circleSz,circleSz);
-	//		[NSColor drawColors:calColors inCircleRect:circleRect opacity:opacity];
+	//		[NSColor drawEventColors:calColors inCircleRect:circleRect opacity:opacity];
 	//
 	//		if (isHightlighted==YES && corner>0.0)
 	//		{
@@ -202,7 +202,7 @@ extension PCalEvent {
 	//	if (calColors==nil || calColors.count==0)
 	//		return;
 	//
-	//	[NSColor drawColors:calColors inCircleRect:circleRect opacity:isHightlighted==YES?0.33:0.15];
+	//	[NSColor drawEventColors:calColors inCircleRect:circleRect opacity:isHightlighted==YES?0.33:0.15];
 	//	if (isHightlighted==YES)
 	//	{
 	//		[[NSColor colorWithCalibratedWhite:0.67 alpha:0.33] set];

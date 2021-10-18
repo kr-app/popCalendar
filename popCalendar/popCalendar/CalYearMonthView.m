@@ -161,7 +161,7 @@
 			if (_isSwitchingMode==NO)
 			{
 				id colors=nil;
-				CGFloat opacity=isDark==YES?0.5:1.0;
+				CGFloat opacity=isDark==YES?0.33:0.33;
 
 				if (date==selectedDate)
 				{
@@ -183,7 +183,7 @@
 
 				if (colors!=nil)
 				{
-					[CalEventColor drawColors:colors inRect:NSMakeRect(pt.x+1.0,pt.y-1.0,19.0,19.0) opacity:opacity];
+					[CalEventColor drawEventColors:colors inRect:NSMakeRect(pt.x+1.0,pt.y-1.0,19.0,19.0) opacity:opacity];
 //					[(NSColor*)colors.lastObject set];
 //					[NSBezierPath fillRect:NSMakeRect(pt.x+0.0,pt.y-0.0,cellSz.width-0.0*2.0,cellSz.height-0.0*2.0)];
 				}

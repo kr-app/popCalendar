@@ -139,7 +139,7 @@ import EventKit
 
 			let sourceType = source.sourceType
 			if sourceType == .calDAV || sourceType == .exchange || sourceType == .local || sourceType == .mobileMe {
-				sourcesCalList.append(["kind": 1, "source": source, "title": source.title])
+				sourcesCalList.append(["kind": 1, "title": source.title])
 				sourcesCalList += theCalendars
 			}
 			else {
@@ -147,7 +147,7 @@ import EventKit
 			}
 		}
 
-		if sourcesCalOthers.count == 0 && (options.rawValue&PCalSourceCalendarListOption.allowNoCalendar.rawValue) != 0 {
+		if sourcesCalList.count == 0 && sourcesCalOthers.count == 0 && (options.rawValue&PCalSourceCalendarListOption.allowNoCalendar.rawValue) != 0 {
 			return [["kind": -1, "title": THLocalizedString("No Calendar")]]
 		}
 
