@@ -74,7 +74,7 @@
 - (void)statusIcon:(StatusIcon*)sender pressed:(NSDictionary*)info
 {
 	[THStatusIconAlfredFirst hide];
-	[THOSAppearance updateDarkMode];
+	//[THOSAppearance updateDarkMode];
 
 	if ([info[@"doubleClick"] boolValue]==YES)
 	{
@@ -139,7 +139,7 @@
 	CGFloat menuBarHeight=[NSApplication sharedApplication].mainMenu.menuBarHeight;
 	swFrame.origin.y=screen.frame.size.height-(menuBarHeight>0.0?menuBarHeight:22.0);
 
-	BOOL isDarkStyle=[THOSAppearance isDarkMode];
+	BOOL isDarkStyle=NO;//[THOSAppearance isDarkMode];
 	if (isDarkStyle==NO)
 		swFrame.origin.y-=1.0;
 
@@ -251,7 +251,7 @@
 	CGFloat menuBarHeight=[NSApplication sharedApplication].mainMenu.menuBarHeight;
 	swFrame.origin.y=screen.frame.size.height-(menuBarHeight>0.0?menuBarHeight:22.0);
 
-	BOOL isDarkStyle=[THOSAppearance isDarkMode];
+	BOOL isDarkStyle=NO;//[THOSAppearance isDarkMode];
 	if (isDarkStyle==NO)
 		swFrame.origin.y-=1.0;
 

@@ -13,7 +13,7 @@ import Cocoa
 	private var strings: [NSAttributedString]? { didSet { needsDisplay = true } }
 
 	@objc func updateUIWithWeeks(_ weeks: [PCalWeek]) {
-		let isDark = THOSAppearance.isDarkMode()
+		let isDark = false//THOSAppearance.isDarkMode()
 		
 		let attrs: [NSAttributedString.Key: Any] = [ 	.paragraphStyle: NSParagraphStyle.th_paragraphStyle(withAlignment: .center),
 																			.font: NSFont.boldSystemFont(ofSize: 8.0),

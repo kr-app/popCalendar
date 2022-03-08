@@ -86,7 +86,7 @@ import Cocoa
 	override func draw(_ dirtyRect: NSRect) {
 //		NSColor.orange.th_draw(inRect: self.bounds)
 
-		let isDark = THOSAppearance.isDarkMode()
+		let isDark = false// THOSAppearance.isDarkMode()
 
 		let frameSz = self.frame.size
 
@@ -126,7 +126,7 @@ import Cocoa
 		isDoubleClick = false
 
 		//let frameSz = self.frame.size
-		let isDark = THOSAppearance.isDarkMode()
+		let isDark = false//THOSAppearance.isDarkMode()
 		
 		plusEvent.setTextNormal("+", font: nil, color: NSColor(calibratedWhite: isDark ? 0.75 : 0.5, alpha: 1.0))
 		plusEvent.setTextOver("+", font: nil, color: NSColor(calibratedWhite: isDark ? 1.0 : 0.33, alpha: 1.0), underlineStyle: 0)

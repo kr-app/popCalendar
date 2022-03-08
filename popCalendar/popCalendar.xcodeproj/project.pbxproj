@@ -50,7 +50,7 @@
 		648A490A172DC855007C962D /* PaneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 648A4908172DC855007C962D /* PaneViewController.xib */; };
 		648A491A172E894B007C962D /* PreferencesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 648A4918172E894A007C962D /* PreferencesWindowController.xib */; };
 		648A4926172E898C007C962D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 648A4928172E898C007C962D /* Localizable.strings */; };
-		649212F325587608002E3F78 /* THBgColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649212F225587608002E3F78 /* THBgColorView.swift */; };
+		649212F325587608002E3F78 /* THColoredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649212F225587608002E3F78 /* THColoredView.swift */; };
 		649212F825587642002E3F78 /* THFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649212F725587642002E3F78 /* THFoundation.swift */; };
 		649212FB25587652002E3F78 /* THExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649212FA25587652002E3F78 /* THExtensions.swift */; };
 		649823E126B73A97003C73B0 /* CalEventListContView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649823E026B73A97003C73B0 /* CalEventListContView.swift */; };
@@ -169,7 +169,7 @@
 		648A4918172E894A007C962D /* PreferencesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindowController.xib; sourceTree = "<group>"; };
 		648A4927172E898C007C962D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		648A4929172E898F007C962D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		649212F225587608002E3F78 /* THBgColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THBgColorView.swift; sourceTree = "<group>"; };
+		649212F225587608002E3F78 /* THColoredView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THColoredView.swift; sourceTree = "<group>"; };
 		649212F725587642002E3F78 /* THFoundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THFoundation.swift; sourceTree = "<group>"; };
 		649212FA25587652002E3F78 /* THExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THExtensions.swift; sourceTree = "<group>"; };
 		649823E026B73A97003C73B0 /* CalEventListContView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalEventListContView.swift; sourceTree = "<group>"; };
@@ -473,7 +473,7 @@
 		64EA5C7117310C9D0048B205 /* THView */ = {
 			isa = PBXGroup;
 			children = (
-				649212F225587608002E3F78 /* THBgColorView.swift */,
+				649212F225587608002E3F78 /* THColoredView.swift */,
 				64B1A7B026810C9800B558E6 /* THNSTextViewPlaceHolder.swift */,
 				64D9C212269227B0007E4456 /* THOverView.swift */,
 				6459B0E526B6CA4100FADA8F /* THOverLabel.swift */,
@@ -609,7 +609,7 @@
 				64F41E82268E4E5100EE5C44 /* StatusIcon.swift in Sources */,
 				640151B0269C5AA000C4DF9A /* THHotKeyCenter.m in Sources */,
 				64CC07D2269B2754003D9392 /* THNSMenuExtensions.swift in Sources */,
-				649212F325587608002E3F78 /* THBgColorView.swift in Sources */,
+				649212F325587608002E3F78 /* THColoredView.swift in Sources */,
 				649212F825587642002E3F78 /* THFoundation.swift in Sources */,
 				641AE16F269A55D2005050E7 /* THFrontmostAppSaver.swift in Sources */,
 				64B92F24268FA296001803CB /* PCalNSViewExtensions.swift in Sources */,

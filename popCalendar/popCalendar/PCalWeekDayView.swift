@@ -20,7 +20,7 @@ import Cocoa
 	}
 	
 	@objc func updateWithDays(_ days: [String], displayMode: PCalWeekDayDisplayMode) {
-		let isDark = THOSAppearance.isDarkMode()
+		let isDark = false//THOSAppearance.isDarkMode()
 
 		let attrs: [NSAttributedString.Key: Any] = [ 	.paragraphStyle: NSParagraphStyle.th_paragraphStyle(withAlignment: .center),
 																			.font: NSFont.boldSystemFont(ofSize: 10.0),
@@ -44,7 +44,7 @@ import Cocoa
 	//	[[NSColor greenColor] th_drawInRect:self.bounds];
 		let frameSz = self.frame.size
 
-		let isDark = THOSAppearance.isDarkMode()
+		let isDark = false//THOSAppearance.isDarkMode()
 
 		if isDark == false {
 //			[[self colorWhiteZone] th_drawInRect:NSMakeRect(0.0,1.0,frameSz.width,frameSz.height-1.0)];

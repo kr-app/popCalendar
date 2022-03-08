@@ -36,7 +36,7 @@
 		attrs[15]=@{NSFontAttributeName:font11,NSForegroundColorAttributeName:[NSColor colorWithCalibratedWhite:0.86 alpha:1.0],NSParagraphStyleAttributeName:paragraphStyle};
 	}
 	
-	BOOL isDark=[THOSAppearance isDarkMode];
+	BOOL isDark=NO;//[THOSAppearance isDarkMode];
 	return attrs[mode+(isDark==YES?8:0)];
 }
 
@@ -95,7 +95,7 @@
 //	[[NSColor orangeColor] th_drawInRect:dirtyRect];
 
 	NSSize frameSz=self.frame.size;
-	BOOL isDark=[THOSAppearance isDarkMode];
+	BOOL isDark=NO;//[THOSAppearance isDarkMode];
 
 //	[[NSColor colorWithCalibratedWhite:1.0-((CGFloat)_month.month/50.0) alpha:1.0] th_drawInRect:dirtyRect];
 

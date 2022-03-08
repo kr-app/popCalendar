@@ -61,7 +61,7 @@
 		attrs[15]=@{NSFontAttributeName:font13,NSForegroundColorAttributeName:[NSColor colorWithCalibratedWhite:0.4 alpha:1.0],NSParagraphStyleAttributeName:paragraphStyle};
 	}
 
-	BOOL isDark=[THOSAppearance isDarkMode];
+	BOOL isDark=NO;//[THOSAppearance isDarkMode];
 	return attrs[mode+(isDark==YES?8:0)];
 }
 
@@ -174,7 +174,7 @@
 - (void)drawRect:(NSRect)dirtyRect
 {
 //	NSSize frameSz=self.frame.size;
-	BOOL isDark=[THOSAppearance isDarkMode];
+	BOOL isDark=NO;//[THOSAppearance isDarkMode];
 
 	NSRect datesFrame=[self datesFrameRect];
 	NSSize cellSz=[self datesCellSizeWithDatesFrame:datesFrame];

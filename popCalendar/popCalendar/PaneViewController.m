@@ -274,7 +274,7 @@
 			veView.autoresizingMask=NSViewWidthSizable|NSViewHeightSizable;
 			//veView.material=NSVisualEffectMaterialPopover;
 			
-			if ([THOSAppearance isDarkMode]==NO)
+			/*if ([THOSAppearance isDarkMode]==NO)*/
 			{
 				THBgColorView *simpleView=[[THBgColorView alloc] initWithFrame:self.view.bounds bgColor:[NSColor whiteColor]];
 				simpleView.autoresizingMask=NSViewWidthSizable|NSViewHeightSizable;

@@ -42,7 +42,7 @@ class CalEventListRowView : NSView, NSMenuDelegate {
 	}
 	
 	private func createViews() {
-		let isDark = THOSAppearance.isDarkMode()
+		let isDark = false//THOSAppearance.isDarkMode()
 		let frameSz = self.frame.size
 
 		let ekCalendar = event.event.calendar
@@ -90,7 +90,7 @@ class CalEventListRowView : NSView, NSMenuDelegate {
 		}
 
 		let frameSz = self.frame.size
-		let isDark = THOSAppearance.isDarkMode()
+		let isDark = false//THOSAppearance.isDarkMode()
 
 		if isSelected == true {
 			NSColor(calibratedWhite: isDark ? 0.5 : 0.9, alpha: isDark ? 0.5 : 0.67).set()

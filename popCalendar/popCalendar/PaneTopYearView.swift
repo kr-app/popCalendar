@@ -57,7 +57,7 @@ import Cocoa
 	
 	override func draw(_ dirtyRect: NSRect) {
 		if downPoint != nil {
-			let dark = THOSAppearance.isDarkMode()
+			let dark = false//THOSAppearance.isDarkMode()
 			NSColor(calibratedWhite: dark ? 0.0 : 0.92, alpha: 1.0).set()
 			NSBezierPath.fill(self.bounds)
 		}
@@ -100,7 +100,7 @@ import Cocoa
 	private func buildToday(mode: String) {
 
 		let frameSz = self.frame.size
-		let dark = THOSAppearance.isDarkMode()
+		let dark = false//THOSAppearance.isDarkMode()
 
 		// <
 		previousOver = THOverView(frame: NSRect(0.0, 0.0, 16.0, 16.0))
@@ -137,7 +137,7 @@ import Cocoa
 	}
 
 	@objc func setTitle(_ title: String, animated: Bool) {
-		let dark = THOSAppearance.isDarkMode()
+		let dark = false//THOSAppearance.isDarkMode()
 
 		titleLabel.setTextNormal(title, font: nil, color: NSColor(calibratedWhite: dark ? 1.0 : 0.0, alpha:1.0))
 		titleLabel.setTextOver(title, font: nil, color: NSColor(calibratedWhite: dark ? 1.0 : 0.0, alpha: 1.0), underlineStyle: NSUnderlineStyle.single.rawValue)
