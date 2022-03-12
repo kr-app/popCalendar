@@ -253,7 +253,7 @@
 
 	if (_winContView==nil)
 	{
-		BOOL visual=!NO;
+		BOOL visual=NO;
 		NSView *contView=nil;
 		
 		if (visual==NO)
@@ -265,24 +265,24 @@
 		}
 		else
 		{
-			NSVisualEffectView *veView=[[NSVisualEffectView alloc] initWithFrame:self.view.bounds];
+			NSVisualEffectView *visualEffectView=[[NSVisualEffectView alloc] initWithFrame:self.view.bounds];
 			//visualEffectView.material=isDarkStyle==YES?NSVisualEffectMaterialDark:NSVisualEffectMaterialLight;
 			//visualEffectView.appearance=[NSAppearance appearanceNamed:NSAppearanceNameAqua];
 	//		visualEffectView.blendingMode=NSVisualEffectBlendingModeBehindWindow;
 	//		visualEffectView.state=NSVisualEffectStateActive;
-			veView.maskImage=[NSVisualEffectView th_maskImageWithCornerRadius: 10.0];
-			veView.autoresizingMask=NSViewWidthSizable|NSViewHeightSizable;
+			visualEffectView.maskImage=[NSVisualEffectView th_maskImageWithCornerRadius: 10.0];
+			visualEffectView.autoresizingMask=NSViewWidthSizable|NSViewHeightSizable;
 			//veView.material=NSVisualEffectMaterialPopover;
 			
-			/*if ([THOSAppearance isDarkMode]==NO)*/
-			{
-				THBgColorView *simpleView=[[THBgColorView alloc] initWithFrame:self.view.bounds bgColor:[NSColor whiteColor]];
-				simpleView.autoresizingMask=NSViewWidthSizable|NSViewHeightSizable;
-//				PaneBgView_Simple *simpleView=[[PaneBgView_Simple alloc] initWithFrame:self.view.bounds];
-				[veView addSubview:simpleView];
-			}
+//			/*if ([THOSAppearance isDarkMode]==NO)*/
+//			{
+//				THBgColorView *simpleView=[[THBgColorView alloc] initWithFrame:self.view.bounds bgColor:[NSColor whiteColor]];
+//				simpleView.autoresizingMask=NSViewWidthSizable|NSViewHeightSizable;
+////				PaneBgView_Simple *simpleView=[[PaneBgView_Simple alloc] initWithFrame:self.view.bounds];
+//				[veView addSubview:simpleView];
+//			}
 
-			contView=veView;
+			contView=visualEffectView;
 		}
 		
 		[contView addSubview:self.view];

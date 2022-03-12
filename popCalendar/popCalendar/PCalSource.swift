@@ -223,8 +223,8 @@ import EventKit
 			return nil
 		}
 
-		var dayLabels = (symbols as NSArray).subarray(with: NSRange(symbolIdx, 7 - symbolIdx)) as! [String]
-		dayLabels += (symbols as NSArray).subarray(with: NSRange(0, symbolIdx)) as! [String]
+		var dayLabels = (symbols as NSArray).subarray(with: NSRange(location: symbolIdx, length: 7 - symbolIdx)) as! [String]
+		dayLabels += (symbols as NSArray).subarray(with: NSRange(location: 0, length: symbolIdx)) as! [String]
 		
 		return dayLabels
 	}

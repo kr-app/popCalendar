@@ -149,7 +149,7 @@ extension CalEventListRowView {
 
 		menu.addItem(NSMenuItem.separator())
 		let deletable = event.event.calendar.allowsContentModifications
-		menu.addItem(THMenuItem(title: THLocalizedString("Delete \"\(event.title?.th_truncate(maxChars: 30, by: .byTruncatingTail))\""), enabled: deletable, block: { () in
+		menu.addItem(THMenuItem(title: THLocalizedString("Delete \"\(event.title?.th_truncate(max: 30, by: .byTruncatingTail))\""), enabled: deletable, block: { () in
 			self.delegator.calEventListRowViewWantsDelete(self)
 		}))
 	}
