@@ -150,7 +150,7 @@ import Cocoa
 	func overView(_ sender: THOverView, drawRect rect: NSRect, withState state: THOverViewState) {
 		if sender == previousOver || sender == nextOver || sender == moreActionsOver {
 			let op: CGFloat = state == .pressed ? 0.66 : 1.0
-			sender.drawRepImage(opacity: op, rect: rect)
+			sender.drawRepImage(opacity: op, centerdInRect: rect)
 		}
 	}
 
