@@ -84,6 +84,7 @@
 		64F41E82268E4E5100EE5C44 /* StatusIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F41E81268E4E5100EE5C44 /* StatusIcon.swift */; };
 		64F61BAB26762877002418D3 /* THLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F61BAA26762877002418D3 /* THLogger.swift */; };
 		64F70EC31F62F8950093A1BB /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64AD07E0192759CC00F90618 /* Carbon.framework */; };
+		BE3B86FD2812BA4300EC2448 /* THDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B86FC2812BA4300EC2448 /* THDateExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -208,6 +209,7 @@
 		64F3554626C1D5F000B18F41 /* THSharedLoginItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THSharedLoginItems.h; sourceTree = "<group>"; };
 		64F41E81268E4E5100EE5C44 /* StatusIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusIcon.swift; sourceTree = "<group>"; };
 		64F61BAA26762877002418D3 /* THLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THLogger.swift; sourceTree = "<group>"; };
+		BE3B86FC2812BA4300EC2448 /* THDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THDateExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -479,6 +481,7 @@
 				649212FA25587652002E3F78 /* THExtensions.swift */,
 				6416238B25685A1700433E79 /* THCocoaExtensions.swift */,
 				649831862710D60B00D80AA2 /* THDataExtensions.swift */,
+				BE3B86FC2812BA4300EC2448 /* THDateExtensions.swift */,
 				640151D7269C941100C4DF9A /* THNSColorExtensions.swift */,
 				640374DF2567295900A49826 /* THFormatterExtensions.swift */,
 				6424BCBC269F54E3008E7084 /* THNSImageExtensions.swift */,
@@ -498,8 +501,8 @@
 			isa = PBXGroup;
 			children = (
 				64F3553F26C1D5F000B18F41 /* THAppInLoginItem.swift */,
-				64F3553D26C1D5F000B18F41 /* THSharedLoginItems.m */,
 				64F3554626C1D5F000B18F41 /* THSharedLoginItems.h */,
+				64F3553D26C1D5F000B18F41 /* THSharedLoginItems.m */,
 			);
 			path = THFinderFile;
 			sourceTree = "<group>";
@@ -641,6 +644,7 @@
 				64C9D1A926B6A0E900484A30 /* PCalWeekDayView.swift in Sources */,
 				64385EF3256DA65800E4C81A /* THLog.swift in Sources */,
 				6416238C25685A1700433E79 /* THCocoaExtensions.swift in Sources */,
+				BE3B86FD2812BA4300EC2448 /* THDateExtensions.swift in Sources */,
 				64C8FF5D2690DD66003300A8 /* PCalMonth.swift in Sources */,
 				64A9EF5B26BC037800F3BFF4 /* THNSChecboxTableCellView.swift in Sources */,
 				64497B3B2691C74B00A313FF /* PCalEventReveal.swift in Sources */,

@@ -740,7 +740,7 @@
 
 		if ([self.view.window isKindOfClass:[PCalWindow class]]==YES)
 		{
-			NSAlert *alert=[[NSAlert alloc] initWithTitle:[title th_terminatingBy:@"."] message:[error th_terminatingBy:@"."]];
+			NSAlert *alert=[[NSAlert alloc] initWithTitle:title message:error];
 			[alert beginSheetModalForWindow:self.view.window completionHandler:NULL];
 		}
 	}
