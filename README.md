@@ -7,3 +7,6 @@ Display Calendar views from your menubar
 ![Capture 2](Presentation/capture_2.png)
 
 
+** MacUpdate **
+
+https://www.macupdate.com/app/mac/47965/popcalendar
