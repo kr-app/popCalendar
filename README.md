@@ -2,7 +2,7 @@
 
 Display Calendar views from your menubar
 
-![Capture 1](Presentation/capture_1.png)
+<img src="Presentation/capture_1.png" alt="Capture 1" width="50%" height="50%"/>
 
 ![Capture 2](Presentation/capture_2.png)
 
