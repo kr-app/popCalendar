@@ -26,10 +26,7 @@
 	_statusIcon=[[StatusIcon alloc] init];
 	[_statusIcon setIconStyle];
 
-	THHotKeyRepresentation *hotKey=[THHotKeyRepresentation hotKeyRepresentationFromUserDefaults];
-	[[THHotKeyCenter shared] tryToRegisterHotKeyRepresentation:hotKey withTag:1];
-
-//	[[THAnalytics shared] sendUsageAtLaunch];
+	[[THHotKeyCenter shared] registerHotKeyRepresentation:[THHotKeyRepresentation hotKeyRepresentationFromUserDefaultsWithTag:1]];
 
 	if ([THStatusIconAlfredFirst needsDisplayAlfredFirst]==YES)
 		[self performSelector:@selector(showAlfredFirstDelayed) withObject:nil afterDelay:0.5];

@@ -92,10 +92,10 @@ class PreferencesWindowController: NSWindowController,
 
 		self.window!.title = THLocalizedString("popCalendar Preferences")
 
-		let hotKey = THHotKeyRepresentation.fromUserDefaults()
+		let hotKey = THHotKeyRepresentation.init(fromUserDefaultsWithTag: 1)
 		hotKeyButton.state = (hotKey != nil && hotKey!.isEnabled == true) ? .on : .off
 		hotKeyField.setControlSize(hotKeyButton.controlSize)
-		hotKeyField.setChangeObserver(self,
+		hotKeyField.setChangeObserver(	self,
 																keyCode: hotKey?.keyCode ?? 0,
 																modifierFlags: hotKey?.modifierFlags ?? 0,
 																isEnabled: hotKey?.isEnabled ?? false)
@@ -305,13 +305,11 @@ class PreferencesWindowController: NSWindowController,
 
 	// MARK: -
 
-	func hotKeyFieldView(_ sender: THHotKeyFieldView!, didChangeWithKeyCode keyCode: UInt, modifierFlags: UInt, isEnabled: Bool) -> Bool {
-		THHotKeyRepresentation(keyCode: keyCode, modifierFlags: modifierFlags, isEnabled: isEnabled).saveToUserDefaults()
-		
-		if isEnabled == true {
+	@objc func hotKeyFieldView(_ sender: THHotKeyFieldView!, didChangeWithKeyCode keyCode: UInt, modifierFlags: UInt, isEnabled: Bool) -> Bool {
+		THHotKeyRepresentation(keyCode: keyCode, modifierFlags: modifierFlags, isEnabled: isEnabled).saveToUserDefaults(withTag: 1)
+		if isEnabled {
 			return THHotKeyCenter.shared().registerHotKey(withKeyCode: keyCode, modifierFlags: modifierFlags, tag: 1)
 		}
-
 		return THHotKeyCenter.shared().unregisterHotKey(withTag: 1)
 	}
 	

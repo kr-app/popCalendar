@@ -84,6 +84,7 @@
 		64F41E82268E4E5100EE5C44 /* StatusIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F41E81268E4E5100EE5C44 /* StatusIcon.swift */; };
 		64F61BAB26762877002418D3 /* THLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64F61BAA26762877002418D3 /* THLogger.swift */; };
 		64F70EC31F62F8950093A1BB /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64AD07E0192759CC00F90618 /* Carbon.framework */; };
+		BE1F3E44282FCDE300CFF5F6 /* THHotKeyCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1F3E43282FCDE300CFF5F6 /* THHotKeyCenter.swift */; };
 		BE3B86FD2812BA4300EC2448 /* THDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B86FC2812BA4300EC2448 /* THDateExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -209,6 +210,7 @@
 		64F3554626C1D5F000B18F41 /* THSharedLoginItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = THSharedLoginItems.h; sourceTree = "<group>"; };
 		64F41E81268E4E5100EE5C44 /* StatusIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusIcon.swift; sourceTree = "<group>"; };
 		64F61BAA26762877002418D3 /* THLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THLogger.swift; sourceTree = "<group>"; };
+		BE1F3E43282FCDE300CFF5F6 /* THHotKeyCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THHotKeyCenter.swift; sourceTree = "<group>"; };
 		BE3B86FC2812BA4300EC2448 /* THDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THDateExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +234,7 @@
 		640151A7269C5AA000C4DF9A /* THHotKey */ = {
 			isa = PBXGroup;
 			children = (
+				BE1F3E43282FCDE300CFF5F6 /* THHotKeyCenter.swift */,
 				640151AB269C5AA000C4DF9A /* THHotKey.h */,
 				640151AA269C5AA000C4DF9A /* THHotKey.m */,
 				640151A8269C5AA000C4DF9A /* THHotKeyCenter.h */,
@@ -650,6 +653,7 @@
 				64497B3B2691C74B00A313FF /* PCalEventReveal.swift in Sources */,
 				640151D8269C941100C4DF9A /* THNSColorExtensions.swift in Sources */,
 				64681256174418CB0039FF5A /* THNSBezierPathExtensions.m in Sources */,
+				BE1F3E44282FCDE300CFF5F6 /* THHotKeyCenter.swift in Sources */,
 				6452D8D02690B3CE0045CCC7 /* PCalYear.swift in Sources */,
 				64AFCCDA268CE8DA00712F77 /* PCalUserContext.swift in Sources */,
 				643A7986256DC31D0007F543 /* THOSAppearance.swift in Sources */,
