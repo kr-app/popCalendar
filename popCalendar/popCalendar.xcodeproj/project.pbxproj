@@ -86,6 +86,7 @@
 		64F70EC31F62F8950093A1BB /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64AD07E0192759CC00F90618 /* Carbon.framework */; };
 		BE1F3E44282FCDE300CFF5F6 /* THHotKeyCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1F3E43282FCDE300CFF5F6 /* THHotKeyCenter.swift */; };
 		BE3B86FD2812BA4300EC2448 /* THDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B86FC2812BA4300EC2448 /* THDateExtensions.swift */; };
+		BEBF69732840ADCC00DD50BD /* THNSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBF69722840ADCC00DD50BD /* THNSExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -212,6 +213,7 @@
 		64F61BAA26762877002418D3 /* THLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THLogger.swift; sourceTree = "<group>"; };
 		BE1F3E43282FCDE300CFF5F6 /* THHotKeyCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THHotKeyCenter.swift; sourceTree = "<group>"; };
 		BE3B86FC2812BA4300EC2448 /* THDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THDateExtensions.swift; sourceTree = "<group>"; };
+		BEBF69722840ADCC00DD50BD /* THNSExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = THNSExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -482,6 +484,7 @@
 			isa = PBXGroup;
 			children = (
 				649212FA25587652002E3F78 /* THExtensions.swift */,
+				BEBF69722840ADCC00DD50BD /* THNSExtensions.swift */,
 				6416238B25685A1700433E79 /* THCocoaExtensions.swift */,
 				649831862710D60B00D80AA2 /* THDataExtensions.swift */,
 				BE3B86FC2812BA4300EC2448 /* THDateExtensions.swift */,
@@ -641,6 +644,7 @@
 				64B92F20268F9456001803CB /* PCalEvent.swift in Sources */,
 				640374E02567295900A49826 /* THFormatterExtensions.swift in Sources */,
 				64681225174410580039FF5A /* THNSMenuExtensions.m in Sources */,
+				BEBF69732840ADCC00DD50BD /* THNSExtensions.swift in Sources */,
 				642D109B1F499A1800DC4897 /* CalWeekMonthView.m in Sources */,
 				64F61BAB26762877002418D3 /* THLogger.swift in Sources */,
 				649823E126B73A97003C73B0 /* CalEventListContView.swift in Sources */,
@@ -741,7 +745,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
@@ -789,7 +793,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.2;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
